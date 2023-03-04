@@ -19,7 +19,20 @@ export default function Home() {
         <h1 className={styles.title}>Coffee Connoisseur</h1>
         <Banner buttonText="View stores nearby" handleOnClick={handleOnBannerBtnClick} />
         <div className={styles.heroImage} ><Img src="/static/hero-image.png" width={700} height={400} alt='hero-image' /></div>
-        <Card name="Darkhorse Coffee" imgUrl="/hero-image.pnng" href="/coffee-store/darkhorse-coffee" />
+        <div className={styles.cardLayout}>
+        <Card
+          name="DarkHorse Coffee"
+          imgUrl="/static/hero-image.png"
+          href="/coffee-store/darkhose-coffee"
+          className={styles.card}
+        />
+        <Card
+          name="DarkHorse Coffee"
+          imgUrl="/static/hero-image.png"
+          href="/coffee-store/darkhose-coffee"
+          className={styles.card}
+        />
+      </div>
       </main>
 
     </div>
