@@ -8,12 +8,14 @@ import cls from "classnames";
 
 export async function getStaticProps(staticProps) {
   const params = staticProps.params;
-  console.log("params", params);
+
+  const coffeeStores = await fetchCoffeeStores();
+  const findCoffeeStoreById = coffeeStores.find((coffeeStore) => {
+    return coffeeStore.id.toString() === params.id; //dynamic id
+  });
   return {
     props: {
-      coffeeStore: coffeeStoresData.find((coffeeStore) => {
-        return coffeeStore.id.toString() === params.id; //dynamic id
-      }),
+      coffeeStore: findCoffeeStoreById ? findCoffeeStoreById : {},
     },
   };
 }
