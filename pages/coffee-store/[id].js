@@ -43,7 +43,7 @@ const CoffeeStore = (props) => {
 
   if (router.isFallback) return <div>Loading...</div>;
 
-  const { name, address, neighbourhood, imgUrl } = props.coffeeStore;
+  const { name, address, neighborhood, imgUrl } = props.coffeeStore;
   const handleUpvoteButton = () => {};
 
   console.log("props", props);
@@ -56,7 +56,7 @@ const CoffeeStore = (props) => {
         <div className={styles.col1}>
           <div className={styles.backToHomeLink}>
             <Link href="/">
-              Back to home
+              ← Back to home
             </Link>
           </div>
           <div className={styles.nameWrapper}>
@@ -80,7 +80,7 @@ const CoffeeStore = (props) => {
               <p className={styles.text}>{address}</p>
             </div>
           )}
-          {neighbourhood && (
+          {neighborhood && (
             <div className={styles.iconWrapper}>
               <Image src="/static/icons/nearMe.svg" width="24" height="24" />
               <p className={styles.text}>{neighborhood[0]}</p>
